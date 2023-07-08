@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .default-section {
+        @apply w-full px-4;
+    }
+
+    .home-hero {
+        @apply w-full max-w-6xl mx-auto flex flex-col items-center py-20;
+    }
+
+    .home-hero figure {
+        @apply w-32 h-32 rounded-full bg-gray-200 overflow-hidden border-4 border-black;
+    }
+
+    .home-hero figure img {
+        @apply w-full h-full object-cover;
+    }
+
+    .home-hero p.name {
+        @apply text-7xl font-extrabold text-center;
+    }
+
+    .home-hero p.welcome-message {
+        @apply text-2xl font-light;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.one {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay:0s;
+}
+
+.two {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+.three {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.6s;
+}
