@@ -25,7 +25,7 @@ export default function Modal({ children, selector = "#modal", onClose = () => {
                                     exit={{ scale: 0.95 }}
                                     className={classNames(
                                         "relative shadow-lg overflow-hidden flex flex-col relative rounded-xl",
-                                        size === "default" ? "w-[98dvw] sm:w-[620px] h-[95dvh] sm:h-[900px]" : null
+                                        size === "default" ? "w-[98dvw] sm:w-[620px] h-[95dvh]" : null
                                     )}
                                 >
                                     {showCloseButton && (
