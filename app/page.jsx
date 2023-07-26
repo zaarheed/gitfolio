@@ -1,11 +1,10 @@
-import HomeHero from "@/components/home-hero";
-import ProjectsGrid from "@/components/projects-grid";
+import HomeSection from "@/components/home-section";
+import sections from "@/data/projects";
 
 export default function HomePage() {
-    return (
-        <div className="w-full h-full">
-            <HomeHero />
-            <ProjectsGrid />
-        </div>
-    )
+	return (
+		<div>
+			{sections.map((section) => (<HomeSection key={section.id} section={section} />))}
+		</div>
+	)
 }

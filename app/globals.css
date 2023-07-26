@@ -8,7 +8,7 @@
     }
 
     .home-hero {
-        @apply w-full max-w-6xl mx-auto flex flex-col items-center py-20;
+        @apply w-full max-w-5xl mx-auto flex flex-col items-center py-20;
     }
 
     .home-hero figure {
