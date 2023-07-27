@@ -1,12 +1,12 @@
 export default function MainProject(props) {
     const { project } = props;
-    const { name, tags = [], description, slug } = project;
+    const { name, tags = [], description, slug, thumbUrl } = project;
 
     return (
         <div className="w-full flex flex-row space-x-4">
             <div className="w-6/12 relative">
                 <figure className="w-full bg-gray-100 rounded-lg overflow-hidden aspect-video">
-
+                    <img src={thumbUrl} className="w-full object-cover object-center" />
                 </figure>
             </div>
             <div className="relative w-6/12">

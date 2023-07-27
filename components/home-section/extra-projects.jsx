@@ -8,11 +8,12 @@ export default function ExtraProjects({ projects = [] }) {
 
 function ExtraProject(props) {
     const { project } = props;
-    const { name, tags = [], description } = project;
+    const { name, tags = [], description, thumbUrl } = project;
 
     return (
         <article className="w-full relative flex flex-col space-y-2">
             <figure className="w-full aspect-square rounded-lg overflow-hidden bg-gray-100">
+                <img src={thumbUrl} className="w-full object-cover object-center h-full" />
             </figure>
             <p className="font-light text-xl">
                 {name}
