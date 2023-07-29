@@ -5,7 +5,7 @@ export default function MainProject(props) {
     return (
         <div className="w-full flex flex-row space-x-4">
             <div className="w-6/12 relative">
-                <figure className="w-full bg-gray-100 rounded-lg overflow-hidden aspect-video">
+                <figure className="w-full bg-gray-100 rounded-lg overflow-hidden aspect-square">
                     <img src={thumbUrl} className="w-full object-cover object-center" />
                 </figure>
             </div>

@@ -26,13 +26,13 @@ export default function Header() {
     return (
         <header
             className={classNames(
-                "bg-gray-300 text-black px-4 flex flex-col w-full fixed top-0 left-0 overflow-hidden",
+                "bg-gradient-to-br from-zinc-800 to-zinc-900 text-zinc-100 px-4 flex flex-col w-full fixed top-0 left-0 overflow-hidden",
                 "duration-300 z-10",
                 minimise ? "h-12 py-3" : "h-56 py-6"
             )}
         >
             <div className="w-full max-w-5xl mx-auto flex flex-col">
-                <p className="text-xl text-gray-700">
+                <p className="text-xl text-zinc-400">
                     Zahid Mahmood, Full-stack Web Engineer
                 </p>
                 <p
