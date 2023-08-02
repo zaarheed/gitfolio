@@ -11,7 +11,7 @@ export async function fetchProjects() {
     return json;
 }
 
-export async function fetchProject(name) {
+export async function fetchGithubRepo(id) {
     // const res = await fetch(`https://api.github.com/repos/${name}`);
     // const json = await res.json();
     const json = repo;

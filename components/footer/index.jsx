@@ -5,7 +5,7 @@ export default function Footer() {
 		>
 			<div className="w-full max-w-5xl mx-auto flex flex-col">
 				<p className="text-gray-700">
-					Zahid Mahmood, Full-stack Web Engineer
+					Lorem ipsum dolor sit amet
 				</p>
 			</div>
 		</nav>
