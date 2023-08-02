@@ -1,14 +1,10 @@
-import comments from "@/data/comments";
 import contents from "@/data/contents";
-import readme from "@/data/readme";
 import repo from "@/data/repo";
-import repos from "@/data/repos";
 
 export async function fetchProjects() {
-    // const res = await fetch(`https://api.github.com/users/zaarheed/repos`);
-    // const json = await res.json();
-    const json = repos;
-    return json;
+    const res = await fetch(`http://localhost:3000/api/projects`);
+    const json = await res.json();
+    return json.projects;
 }
 
 export async function fetchGithubRepo(id) {
@@ -18,19 +14,10 @@ export async function fetchGithubRepo(id) {
     return json;
 }
 
-export async function fetchProjectDetails(name) {
-    // const res = await fetch(`https://api.github.com/repos/${name}`);
-    // const json = await res.json();
-    const json = repo;
-    return json;
-}
-
-export async function fetchReadme(name) {
-    // const res = await fetch(`https://api.github.com/repos/${name}`);
-    // const json = await res.json();
-    await new Promise(resolve => setTimeout(resolve, 3000));
-    const json = readme;
-    return json;
+export async function fetchProject(id) {
+	const res = await fetch(`http://localhost:3000/api/projects/${id}`);
+	const json = await res.json();
+	return json.project;
 }
 
 export async function fetchContents(name) {
@@ -40,9 +27,8 @@ export async function fetchContents(name) {
     return json;
 }
 
-export async function fetchComments(name) {
-    // const res = await fetch(``);
-    // const json = await res.json();
-    const json = comments;
-    return json;
+export async function fetchSections() {
+    const res = await fetch(`http://localhost:3000/api/categories`);
+    const json = await res.json();
+    return json.categories;
 }

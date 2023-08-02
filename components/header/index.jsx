@@ -5,12 +5,9 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
     const pathname = usePathname();
-    const isHome = pathname === "/";
-    const [minimise, setMinimise] = useState(!isHome);
+    const [minimise, setMinimise] = useState(false);
 
     const handleScroll = (e) => {
-        if (!isHome) return;
-
         const currentScrollY = window.scrollY;
 
         if (currentScrollY > 100) {
@@ -51,7 +48,7 @@ export default function Header() {
                     </p>
                 </div>
             </header>
-            <div className={classNames(isHome ? "pb-60" : "pb-16")} />
+            <div className="pb-60" />
         </>
     );
 }

@@ -6,9 +6,10 @@ export async function GET(request, context) {
 		SELECT
 			c.*,
 			JSON_AGG(json_build_object(
+				'id', p.id,
 				'author', p.author,
 				'repo', p.repo,
-				'thumbUrl', p.thumbUrl,
+				'thumburl', p.thumbUrl,
 				'name', p.name,
 				'tags', p.tags,
 				'description', p.description,

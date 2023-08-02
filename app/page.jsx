@@ -1,14 +1,8 @@
 import HomeSection from "@/components/home-section";
-import _sections from "@/data/sections";
-
-async function fetchSections() {
-    const res = await fetch(`http://localhost:3000/api/categories`);
-    const json = await res.json();
-    return json.categories;
-}
+import { fetchSections } from "@/services/fetch";
 
 export default async function HomePage() {
-	const sections = await fetchSections() || [];
+	const sections = await fetchSections();
 
 	return (
 		<div>

@@ -1,24 +1,18 @@
 import ProjectContents from "@/components/project-contents";
-import { fetchContents, fetchGithubRepo, fetchReadme } from "@/services/fetch";
+import { fetchContents, fetchGithubRepo, fetchProject, fetchReadme } from "@/services/fetch";
 import { FaCodeBranch, FaGithub, FaStar } from "react-icons/fa";
-
-async function fetchProject(id) {
-	const res = await fetch(`http://localhost:3000/api/projects/${id}`);
-	const json = await res.json();
-	return json.project;
-}
 
 export default async function SingeProjectPage({ params }) {
 	const { id } = params;
 	const project = await fetchProject(id);
-	const content = await fetchReadme("");
 	const contents = await fetchContents("");
 	const { thumburl, name, tags = [], description, author } = project;
 	const repo = await fetchGithubRepo(`${author}/${name}`);
 	const { forks, stargazers_count: stars, html_url: url } = repo;
-	console.log(repo);
 
-	if (!content) return null;
+	if (!project) {
+		throw new Error("Project not found");
+	}
 
 	return (
 		<div className="w-full prose py-10">
