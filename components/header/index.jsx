@@ -31,12 +31,12 @@ export default function Header() {
                 className={classNames(
                     "bg-gradient-to-br from-zinc-800 to-zinc-900 text-zinc-100 px-4 flex flex-col w-full fixed top-0 left-0 overflow-hidden",
                     "duration-300 z-10",
-                    minimise ? "h-12 py-3" : "h-56 py-6"
+                    minimise ? "h-12 py-3" : "h-40 py-6"
                 )}
             >
                 <div className="w-full max-w-5xl mx-auto flex flex-col">
                     <p className="text-xl text-zinc-400">
-                        Lorem ipsum dolor sit amet
+                        Zahid Mahmood
                     </p>
                     <p
                         className={classNames(
@@ -44,11 +44,11 @@ export default function Header() {
                             minimise ? "hidden" : "block"
                         )}
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Hi 👋 I'm a full-stack Web Engineer obsessed with Next.js
                     </p>
                 </div>
             </header>
-            <div className="pb-60" />
+            <div className="pb-56" />
         </>
     );
 }

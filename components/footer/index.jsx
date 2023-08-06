@@ -5,7 +5,7 @@ export default function Footer() {
 		>
 			<div className="w-full max-w-5xl mx-auto flex flex-col">
 				<p className="text-gray-700">
-					Lorem ipsum dolor sit amet
+					Example project built for SuperHi Plus 👋
 				</p>
 			</div>
 		</nav>

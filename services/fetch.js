@@ -28,7 +28,7 @@ export async function fetchContents(name) {
 }
 
 export async function fetchSections() {
-    const res = await fetch(`http://localhost:3000/api/categories`);
+    const res = await fetch(`http://localhost:3000/api/categories`, { cache: 'no-store' });
     const json = await res.json();
     return json.categories;
 }
