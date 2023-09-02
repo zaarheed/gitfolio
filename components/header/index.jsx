@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import classNames from "classnames";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Header() {
     const pathname = usePathname();
@@ -35,12 +36,12 @@ export default function Header() {
                 )}
             >
                 <div className="w-full max-w-5xl mx-auto flex flex-col">
-                    <p className="text-xl text-zinc-400">
+                    <Link href="/" className="text-xl text-zinc-400">
                         Zahid Mahmood
-                    </p>
+                    </Link>
                     <p
                         className={classNames(
-                            "text-5xl font-serif",
+                            "text-2xl md:text-5xl font-serif",
                             minimise ? "hidden" : "block"
                         )}
                     >

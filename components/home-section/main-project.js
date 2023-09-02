@@ -5,13 +5,13 @@ export default function MainProject(props) {
     const { name, tags = [], description, id, thumburl } = project;
 
     return (
-        <div className="w-full flex flex-row space-x-4">
-            <div className="w-6/12 relative">
+        <div className="w-full flex flex-col md:flex-row space-y-4 md:space-x-4">
+            <div className="w-full md:w-6/12 relative">
                 <figure className="w-full bg-gray-100 rounded-lg overflow-hidden aspect-square">
                     <img src={thumburl} className="w-full object-cover object-center" />
                 </figure>
             </div>
-            <div className="relative w-6/12">
+            <div className="relative w-full md:w-6/12">
                 <div className="w-full flex flex-col space-y-3">
                     <p className="font-light text-xl">
                         {name}

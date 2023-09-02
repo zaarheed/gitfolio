@@ -16,13 +16,13 @@ export default async function SingeProjectPage({ params }) {
 
 	return (
 		<div className="w-full prose py-10">
-			<div className="w-full flex flex-row space-x-4">
-				<div className="w-6/12 relative">
+			<div className="w-full flex flex-col md:flex-row space-y-4 md:space-x-4">
+				<div className="w-full md:w-6/12 relative">
 					<figure className="w-full bg-gray-100 rounded-lg overflow-hidden aspect-square">
 						<img src={thumburl} className="w-full object-cover object-center" />
 					</figure>
 				</div>
-				<div className="relative w-6/12">
+				<div className="relative w-full md:w-6/12">
 					<div className="w-full flex flex-col space-y-3">
 						<p className="font-light text-xl">
 							{name}
@@ -33,7 +33,7 @@ export default async function SingeProjectPage({ params }) {
 						<p className="w-full font-serif text-3xl">
 							{description}
 						</p>
-						<div className="w-full grid grid-cols-3 gap-4">
+						<div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
 							<div className="bg-white border-gray-300 border rounded-lg px-3 py-2 flex flex-row items-center justify-center group one opacity-0 w-full">
 								<FaStar className="text-yellow-500 group-hover:scale-125 duration-200" />
 								<span className="ml-2">{stars} stars</span>
